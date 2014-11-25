@@ -566,5 +566,6 @@ searchMusics = () ->
 
 
   $tracks = $('#tracks')
-  Sounccloud.search(q, @env.sc_client_id, $tracks, initFixedStart)
+  Youtube.search(q, $tracks, initFixedStart)
+  Soundcloud.search(q, @env.sc_client_id, $tracks, initFixedStart)
 
