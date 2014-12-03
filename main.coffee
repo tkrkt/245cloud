@@ -223,6 +223,9 @@ start = () ->
   @env.is_doing = true
   @syncWorkload('doing')
 
+  # for 12/3
+  initComments()
+  @initSelectRooms()
   Util.countDown(@env.pomotime*60*1000, complete)
 
 window.play = (key) ->
@@ -273,7 +276,9 @@ complete = () ->
   $("#playing").fadeOut()
   $("#search").fadeOut()
   $("#playing").html('') # for stopping
-  @initSelectRooms()
+
+  # for 12/3
+  #@initSelectRooms()
   workload = @workload
   w = workload.attributes
   first = new Date(workload.createdAt)
@@ -294,7 +299,8 @@ complete = () ->
   $complete = $('#complete')
   $complete.html('24分おつかれさまでした！5分間交換ノートが見られます')
 
-  initComments()
+  # for 12/3
+  #initComments() 
 
   Util.countDown(@env.chattime*60*1000, 'finish')
 
