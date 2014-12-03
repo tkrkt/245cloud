@@ -180,7 +180,7 @@ initDone = () ->
       disp = "#{Util.hourMin(workload.createdAt)}開始（#{workload.attributes.number}回目）"
       @addWorkload("#done", workload, disp)
     initFixedStart()
-  , null, 100)
+  , null, 200)
   
 login = () ->
   console.log 'login'
