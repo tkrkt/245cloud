@@ -16,10 +16,16 @@ group :production do
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
 
 gem 'haml'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
+
